@@ -17,7 +17,7 @@
 %
 % This work consists of the files awesome-source-cv.cls 
 
-\ProvidesClass{awesome-source-cv}[2016/11/05 v1.6.1 Awesome Source CV Class]
+\ProvidesClass{cv-source}[2016/11/05 v1.6.1 Awesome Source CV Class]
 
 \LoadClass[a4paper]{article}
 
@@ -375,6 +375,22 @@
                    \end{minipage}										\\*
                  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
+  
+% Render an project in the project environment
+% Usage: 
+% \project
+% {<Title>}{<Enterprise>}{<Country>}
+% {
+%   <Experience description (Could be a list)>
+% }
+% {<Technology list>}
+\newcommand\project[5]{
+	\textsc{#1}, #2, #3   							\\
+	\begin{minipage}[t]{\rightcolumnlength}
+		#4
+	\end{minipage}									\\
+	\footnotesize{\foreach \n in {#5}{\cvtag{\n}}} 	\\
+}
 
 % Render a consultant experience in the experiences environment
 % Usage: 
