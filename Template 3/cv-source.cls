@@ -369,27 +369,34 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  \textsc{#1}    & \textsc{#2, #3, #4}   								\\*
+  \textsc{#1}    & \textsc{#2, #3, #4}   								\\
   \textsc{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
-                   \end{minipage}										\\*
+                   \end{minipage}										\\
                  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
   
+% Define the 'project' environment
+%\newenvironment{projects}
+%{\begin{enumerate}\raggedright}
+%{\end{enumerate}}
+
+\newenvironment{projects}{}
+
 % Render an project in the project environment
 % Usage: 
 % \project
-% {<Title>}{<Enterprise>}{<Country>}
+% {<Title>}{<Enterprise>}
 % {
 %   <Experience description (Could be a list)>
 % }
 % {<Technology list>}
-\newcommand\project[5]{
-	\textsc{#1}, #2, #3   							\\
+\newcommand\project[4]{
+	\textsc{#1}, #2  							\\
 	\begin{minipage}[t]{\rightcolumnlength}
-		#4
+		#3
 	\end{minipage}									\\
-	\footnotesize{\foreach \n in {#5}{\cvtag{\n}}} 	\\
+	\footnotesize{\foreach \n in {#4}{\cvtag{\n}}}	\\
 }
 
 % Render a consultant experience in the experiences environment
