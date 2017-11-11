@@ -216,11 +216,11 @@
 
 % Render author's linked-in complete link (optional)
 % Usage: \linkedin{<linked-in-nick>}
-%\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{linkedin.com/in/#1}}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{linkedin.com/in/#1}}
 
 % Render author's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{linkedin}}
+%\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{linkedin}}
 
 % Render author's viadeo(optional)
 % Usage: \viadeo{<viadeo-nick>}
@@ -228,11 +228,11 @@
 
 % Render author's github complete link (optional)
 % Usage: \github{<github-nick>}
-%\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
 
 % Render author's github (optional)
 % Usage: \github{<github-nick>}
-\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{GitHub}}           % Github icon + URL
+%\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{GitHub}}           % Github icon + URL
 
 % Render author's email (optional)
 % Usage: \email{<email adress>}
