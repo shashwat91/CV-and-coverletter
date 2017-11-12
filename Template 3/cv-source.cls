@@ -376,29 +376,6 @@
                  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
   
-% Define the 'project' environment
-%\newenvironment{projects}
-%{\begin{enumerate}\raggedright}
-%{\end{enumerate}}
-
-\newenvironment{projects}{}
-
-% Render an project in the project environment
-% Usage: 
-% \project
-% {<Title>}{<Enterprise>}
-% {
-%   <Experience description (Could be a list)>
-% }
-% {<Technology list>}
-\newcommand\project[4]{
-	\textsc{#1}, #2  							\\
-	\begin{minipage}[t]{\rightcolumnlength}
-		#3
-	\end{minipage}									\\
-	\footnotesize{\foreach \n in {#4}{\cvtag{\n}}}	\\
-}
-
 % Render a consultant experience in the experiences environment
 % Usage: 
 % \consultantexperience
@@ -418,3 +395,19 @@
   }
 
 \newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
+
+\newcommand\thesis[5]{
+	\textsc{#1}    & \textsc{#2}   								\\
+	\textsc{#3}    & \begin{minipage}[t]{\rightcolumnlength}
+		#4
+	\end{minipage}										\\
+	& \footnotesize{\foreach \n in {#5}{\cvtag{\n}}} 	\\
+}
+
+\newcommand\project[6]{
+	\textsc{#1}    & \textsc{#2, #3}   								\\
+	\textsc{#4}    & \begin{minipage}[t]{\rightcolumnlength}
+		#5
+	\end{minipage}										\\
+	& \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
+}
